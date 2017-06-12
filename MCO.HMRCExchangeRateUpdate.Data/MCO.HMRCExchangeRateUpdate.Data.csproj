@@ -48,6 +48,10 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MandCo.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\MCO\Lib\MCO.Data\obj\Release\MandCo.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -67,12 +71,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Sql\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="F:\dev\MCO\Lib\MCO.Data\MandCo.Data.csproj">
-      <Project>{b2e29057-6d25-425f-ae37-c54a5b9ea271}</Project>
-      <Name>MandCo.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
