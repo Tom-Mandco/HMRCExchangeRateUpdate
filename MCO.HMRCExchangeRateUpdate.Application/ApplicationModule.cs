@@ -36,7 +36,9 @@
             Bind(typeof(IXMLParser)).To(typeof(XMLParser));
             Bind(typeof(IXMLReader)).To(typeof(XMLReader));
             Bind(typeof(IDataHandler)).To(typeof(DataHandler));
+            Bind(typeof(IDataAdapter)).To(typeof(DataAdapter));
             Bind(typeof(IPerformLookup)).To(typeof(PerformLookup));
+            Bind(typeof(IPerformInsert)).To(typeof(PerformInsert));
             Bind(typeof(IRepository)).To(typeof(OracleRepository)).InSingletonScope().WithConstructorArgument("connectionString", connectionString);
         }
     }

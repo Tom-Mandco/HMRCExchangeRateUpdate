@@ -26,14 +26,14 @@
                     To_Currency_Code = _currencyCode,
                     Rate_of_Exchange = _exchRate,
                 };
-
+                
                 resultList.Add(newExchangeRate);
             }
 
             ExchangeRates result = new ExchangeRates()
             {
                 Exchange_Rates = resultList,
-                Effective_Date = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1)
+                Effective_Date = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1, 0, 0, 0)
             };
 
             return result;
