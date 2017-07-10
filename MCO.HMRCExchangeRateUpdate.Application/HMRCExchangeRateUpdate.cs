@@ -1,9 +1,8 @@
 ﻿namespace MCO.HMRCExchangeRateUpdate.Application
 {
     using Interfaces;
-    using System;
 
-    class Program
+    class HMRCExchangeRateUpdate
     {
         static void Main(string[] args)
         {
@@ -12,8 +11,6 @@
             var app = CompositionRoot.Resolve<IApp>();
 
             app.Run();
-
-            Console.Read();
         }
     }
 }

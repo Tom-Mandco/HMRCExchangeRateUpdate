@@ -16,6 +16,11 @@
 
             string[] countryCodes = ConfigurationManager.AppSettings["CountryCodesToRecord"].Split(';');
 
+            if(countryCodes.Contains("GB"))
+            {
+                result.Add(Return_GBPExchangeRate_ToModel());
+            }
+
             foreach (ExchangeRate _exchangeRate in exchangeRates.Exchange_Rates)
             {
                 if (countryCodes.Contains(_exchangeRate.To_Country_Code))
@@ -34,6 +39,24 @@
                     result.Add(_newExchangeRate);
                 }
             }
+
+            return result;
+        }
+
+        private DB_ExchangeRate Return_GBPExchangeRate_ToModel()
+        {
+            DateTime effectiveDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1, 0, 0, 0);
+
+            DB_ExchangeRate result = new DB_ExchangeRate()
+            {
+                FROM_COUNTRY_CODE = "GB",
+                TO_COUNTRY_CODE = "GB",
+                FROM_CURRENCY = "GBP",
+                TO_CURRENCY = "GBP",
+                EFFECTIVE_DATE = effectiveDate,
+                EXCHANGE_RATE = 1,
+                LAST_UPDATE_USR_ID = "HMRC_Update",
+            };
 
             return result;
         }

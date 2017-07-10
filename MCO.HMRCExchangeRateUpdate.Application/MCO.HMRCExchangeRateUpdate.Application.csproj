@@ -84,7 +84,7 @@
     <Compile Include="Interfaces\IApp.cs" />
     <Compile Include="Interfaces\IDataHandler.cs" />
     <Compile Include="Interfaces\ILog.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="HMRCExchangeRateUpdate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
